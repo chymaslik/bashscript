@@ -3,7 +3,7 @@ x=0
 port=1111
 for file in ./Dockerfile.*
 do
-    if lsof | grep $port
+    if grep $port lsof
     then
     ((port=port+1111))
     fi
